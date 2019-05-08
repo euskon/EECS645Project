@@ -46,7 +46,7 @@ void traceParse::printTraces()
 }
 // std::string str = "0x195d5910";
 // int val = std::stoi (str,nullptr,0);
-//   std::bitset<32> hexDig (val);
+// std::bitset<32> hexDig (val);
 bool sortByCycles(const tuple<int,int,bool,string>& next,
                   const tuple<int,int,bool,string>& curr)
 {
