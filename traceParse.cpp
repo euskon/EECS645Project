@@ -29,6 +29,8 @@ traceParse::traceParse()
         traces.push_back(make_tuple(3, cycle, rw, hex));
     }
     inFile.close();
+    sort(traces.begin(), traces.end());
+    sort(traces.begin(), traces.end(), sortByCycles);
     
 }
 traceParse::~traceParse()
@@ -37,16 +39,16 @@ traceParse::~traceParse()
 }
 void traceParse::printTraces()
 {
-    for(int i = 0; i<traces.size(); i++)
+    for(unsigned int i = 0; i<traces.size(); i++)
     {
-        cout << "v[" << i << "] = " << get<1>(traces[i]) << " " << get<3>(traces[i]) << '\n';
+        cout << "v[" << i << "] = " << get<0>(traces[i]) << " " << get<1>(traces[i]) << " " << get<3>(traces[i]) << '\n';
     }
 }
 // std::string str = "0x195d5910";
 // int val = std::stoi (str,nullptr,0);
 //   std::bitset<32> hexDig (val);
-bool traceParse::sortByCycles(const tuple<int,int,bool,string> a,
-                              const tuple<int,int,bool,string> b)
+bool sortByCycles(const tuple<int,int,bool,string>& next,
+                  const tuple<int,int,bool,string>& curr)
 {
-    return(get<1>(a), get<1>(b));
+    return(get<1>(next) < get<1>(curr));
 }
