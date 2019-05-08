@@ -31,10 +31,7 @@ public:
     /*prints our all tuples in vector
     **loop is bounded by vect.size()
     */
-    void printTraces();    
-    
-    
-    
+    void printTraces(); 
 };
 //helper func: sorting using tuples as params use w/ sort()
 bool sortByCycles(const tuple<int,int,bool,string>& next,
