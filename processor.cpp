@@ -23,9 +23,11 @@ char Processor::getStateAt(string index)
 {
     return(m_stateArr[stoi(index,nullptr,2)]);
 }
-void Processor::setStateAt(string index, char newState){
+void Processor::setStateAt(string index, char newState)
+{
     m_stateArr[stoi(index,nullptr,2)] = newState;
 }
-void Processor::setTagAt(string index, string newTag){
+void Processor::setTagAt(string index, string newTag)
+{
     m_tagArr[stoi(index,nullptr,2)] = newTag;
 }

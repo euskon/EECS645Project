@@ -27,6 +27,9 @@ public:
     //Set
     void setStateAt(string index, char newState);
     void setTagAt(string index, string newTag);
+
+    //StateSpecific Functions for Transition and side-effects
+    void invalid(char state, bool rw, string Tag);
     
 
 };
