@@ -31,6 +31,8 @@ public:
     **loop is bounded by vect.size()
     */
     void printTraces(); 
+    tuple<int,int,bool,string> getTraceAt(int index);
+    int getTraceVectorSize();
 };
 //helper func: sorting using tuples as params use w/ sort()
 bool sortByCycles(const tuple<int,int,bool,string>& next,

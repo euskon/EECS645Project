@@ -44,6 +44,14 @@ void traceParse::printTraces()
         cout << "v[" << i << "] = " << get<0>(traces[i]) << " " << get<1>(traces[i]) << " " << get<3>(traces[i]) << '\n';
     }
 }
+tuple<int,int,bool,string> traceParse::getTraceAt(int index)
+{
+    return (traces[index]);
+}
+int traceParse::getTraceVectorSize()
+{
+    return(traces.size());
+}
 // std::string str = "0x195d5910";
 // int val = std::stoi (str,nullptr,0);
 // std::bitset<32> hexDig (val);
